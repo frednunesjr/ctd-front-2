@@ -1,7 +1,10 @@
+let resultadoDiv = document.getElementById("resultado");
+let resetarBtn = document.getElementById("resetar");
+let opcao = document.getElementsByClassName("opcao");
+
 const jokenpo = (escolha) => {
     let usuario = parseInt(escolha.value, 10);
     let computador = parseInt(Math.random() * 3 + 1, 10);
-
     console.log('Usuário', usuario);
     console.log('Computador', computador);
 
@@ -18,8 +21,7 @@ const jokenpo = (escolha) => {
     }
 
     let resultado;
-    let resultadoDiv = document.getElementById("resultado");
-    let err = "Não foi possível encontrar um resultado."
+    let err = "Não foi possível encontrar um resultado.";
 
     switch (usuario) {
         case 1:
@@ -44,6 +46,17 @@ const jokenpo = (escolha) => {
             resultado = err;
             break;
     }
-
+    for(item of opcao) {
+        item.setAttribute('disabled', true);
+    }
     resultadoDiv.innerText = `Usuário: ${opcoes[usuario]}\nComputador: ${opcoes[computador]}\n${resultado}`;
+    resetarBtn.classList.remove('d-none');
+}
+
+const resetar = () => {
+    for(item of opcao) {
+        item.removeAttribute('disabled');
+    }
+    resultadoDiv.innerText = 'Aguardando escolha...';
+    resetarBtn.classList.add('d-none');
 }
