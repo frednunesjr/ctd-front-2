@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+    <style>
+        html, body, * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+        }
+        
+        .title {
+            color: #fff;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .main {
+            text-align: center;
+            width: 90vw;
+            margin: 100px auto auto auto;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .escolha, .placar {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 20px 50px;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: orangered;
+            border: 2px solid orangered;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background-color: orangered;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 class="title">Jokenpo</h1>
+        <div class="escolha">
+            <h2>Escolha uma opção</h2>
+            <button class="btn" type="button" value="1" onclick="jokenpo(this)">Pedra 🪨</button>
+            <button class="btn" type="button" value="2" onclick="jokenpo(this)">Papel 📜</button>
+            <button class="btn" type="button" value="3" onclick="jokenpo(this)">Tesoura ✂️</button>
+            <hr>
+            <h3>Resultado</h3>
+            <p id="resultado">Aguardando escolha...</p>
+        </div>
+    </div>
+    <script src="jogo.js"></script>
+</body>
+</html>
