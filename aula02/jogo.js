@@ -24,22 +24,20 @@ const jokenpo = (escolha) => {
     let err = "Não foi possível encontrar um resultado.";
 
     switch (usuario) {
+        case computador:
+            resultado = placar.empate;
+            break;
+            
         case 1:
-            computador == 1 ? resultado = placar.empate  : false;
-            computador == 2 ? resultado = placar.derrota : false;
-            computador == 3 ? resultado = placar.vitoria : false;
+            computador == 2 ? resultado = placar.derrota : resultado = placar.vitoria;
             break;
 
         case 2:
-            computador == 1 ? resultado = placar.vitoria : false;
-            computador == 2 ? resultado = placar.empate  : false;
-            computador == 3 ? resultado = placar.derrota : false;
+            computador == 1 ? resultado = placar.vitoria : resultado = placar.derrota;
             break;
 
         case 3:
-            computador == 1 ? resultado = placar.derrota : false;
-            computador == 2 ? resultado = placar.vitoria : false;
-            computador == 3 ? resultado = placar.empate  : false;
+            computador == 1 ? resultado = placar.derrota : resultado = placar.vitoria;
             break;
             
         default:
