@@ -58,5 +58,3 @@ const resetar = () => {
     resultadoDiv.innerText = 'Aguardando escolha...';
     resetarBtn.classList.add('d-none');
 }
-
-document.getElementById('opcoes').innerHTML = 'AAAA' ;
