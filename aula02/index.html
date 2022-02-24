@@ -81,9 +81,11 @@
         <h1 class="title">Jokenpo</h1>
         <div class="escolha">
             <h2>Escolha uma opção</h2>
-            <button class="btn opcao" type="button" value="1" onclick="jokenpo(this)">Pedra 🪨</button>
-            <button class="btn opcao" type="button" value="2" onclick="jokenpo(this)">Papel 📜</button>
-            <button class="btn opcao" type="button" value="3" onclick="jokenpo(this)">Tesoura ✂️</button>
+            <div id="opcoes">
+                <button class="btn opcao" type="button" value="1" onclick="jokenpo(this)">Pedra 🪨</button>
+                <button class="btn opcao" type="button" value="2" onclick="jokenpo(this)">Papel 📜</button>
+                <button class="btn opcao" type="button" value="3" onclick="jokenpo(this)">Tesoura ✂️</button>
+            </div>
             <hr>
             <h3>Resultado</h3>
             <p id="resultado">Aguardando escolha...</p>

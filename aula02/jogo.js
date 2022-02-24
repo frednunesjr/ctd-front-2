@@ -29,15 +29,15 @@ const jokenpo = (escolha) => {
             break;
             
         case 1:
-            computador == 2 ? resultado = placar.derrota : resultado = placar.vitoria;
+            resultado = computador == 2 ? placar.derrota : placar.vitoria;
             break;
 
         case 2:
-            computador == 1 ? resultado = placar.vitoria : resultado = placar.derrota;
+            resultado = computador == 1 ? placar.vitoria : placar.derrota;
             break;
 
         case 3:
-            computador == 1 ? resultado = placar.derrota : resultado = placar.vitoria;
+            resultado = computador == 1 ? placar.derrota : placar.vitoria;
             break;
             
         default:
@@ -58,3 +58,5 @@ const resetar = () => {
     resultadoDiv.innerText = 'Aguardando escolha...';
     resetarBtn.classList.add('d-none');
 }
+
+document.getElementById('opcoes').innerHTML = 'AAAA' ;
