@@ -99,5 +99,4 @@ você terá que modificar os seletores a fim de poder resolver o exercício. */
 
 .dark .toggle {
   color: yellow;
-  transition: 1s;
 }
