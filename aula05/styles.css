@@ -10,6 +10,10 @@ body {
   background-color: rgb(219, 219, 219);
 }
 
+body, .cabecalho, .container, .item {
+  transition: .2s;
+}
+
 .cabecalho {
   padding: .5em 1em;
   background-color: white;
